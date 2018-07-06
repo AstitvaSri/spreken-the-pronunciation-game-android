@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/aldrich</item>
+        <item>@font/allerta</item>
+        <item>@font/allerta_stencil</item>
+        <item>@font/atomic_age</item>
+        <item>@font/bungee_inline</item>
+        <item>@font/bungee_shade</item>
+        <item>@font/cedarville_cursive</item>
+        <item>@font/cinzel_decorative</item>
+        <item>@font/delius_swash_caps</item>
+        <item>@font/ewert</item>
+        <item>@font/hanalei_fill</item>
+        <item>@font/jacques_francois_shadow</item>
+        <item>@font/kelly_slab</item>
+        <item>@font/lilita_one</item>
+        <item>@font/monofett</item>
+        <item>@font/monoton</item>
+        <item>@font/ribeye_marrow</item>
+        <item>@font/six_caps</item>
+        <item>@font/tenor_sans</item>
+        <item>@font/unica_one</item>
+        <item>@font/wallpoet</item>
+        <item>@font/walter_turncoat</item>
+    </array>
+</resources>

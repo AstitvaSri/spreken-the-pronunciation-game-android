@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.sivastava.astitva.spreken.HomeScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:orientation="vertical"
+        android:id="@+id/mainworkinglayout">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:gravity="top"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/settings_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/settings"
+                android:onClick="showOptions"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/developer_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/creator"
+                android:onClick="showDeveloper"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bungee_shade"
+            android:text="SPREKEN"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/walter_turncoat"
+            android:text="THE PRONUNCIATION GAME"
+            android:textAlignment="center"
+            android:textColor="@android:color/darker_gray" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/startgame"
+                android:layout_width="250dp"
+                android:layout_height="185dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/start"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+//*********************GREY FILTER********************************
+
+    <RelativeLayout
+        android:id="@+id/frameshadow"
+        android:background="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:visibility="gone">
+
+    </RelativeLayout>
+
+//*******************OPTIONS****************************
+
+    <FrameLayout
+        android:id="@+id/optionsframe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/buttonhighscore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HIGH SCORES"
+                android:textSize="22sp"
+                android:backgroundTint="#F3694F"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/bungee_inline"
+                android:onClick="showHighScorePanel"/>
+
+            <Button
+                android:id="@+id/buttondifficulty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DIFFICULTY"
+                android:textSize="22sp"
+                android:fontFamily="@font/bungee_inline"
+                android:backgroundTint="#53CAFE"
+                android:textColor="#ffffff"
+                android:onClick="showDifficultyPanel"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HOW TO PLAY ?"
+                android:textSize="22sp"
+                android:fontFamily="@font/bungee_inline"
+                android:backgroundTint="#4FC17C"
+                android:textColor="#ffffff"
+                android:onClick="showGuide"/>
+            <Button
+                android:id="@+id/nothanks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#000000"
+                android:text="NO THANKS!"
+                android:fontFamily="@font/walter_turncoat"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:onClick="hideOptions"/>
+
+
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+
+//******************************************************
+
+//*******************DEVELOPER***************************
+    <FrameLayout
+        android:id="@+id/devframe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:paddingBottom="5dp">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/developer"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:src="@drawable/programmer"/>
+
+            <TextView
+                android:id="@+id/devbyastitva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/walter_turncoat"
+                android:text=" DEVELOPED BY\nASTITVA SRIVASTAVA\n"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/devgotit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:text="OK"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/walter_turncoat"
+                android:onClick="hideDeveloper"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+//*******************************************************************
+
+//*****************DIFFICULTY PANEL**********************************
+
+    <FrameLayout
+        android:id="@+id/difficultyframe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="40dp"
+            android:gravity="bottom">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="KID"
+                android:fontFamily="@font/bungee_inline"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:onClick="setDifficultyKid"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MAN"
+                android:fontFamily="@font/bungee_inline"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:onClick="setDifficultyMan"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LEGEND"
+                android:fontFamily="@font/bungee_inline"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:onClick="setDifficultyLegend"/>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+//*******************************************************************
+    //*****************HIGH SCORE PANEL**********************************
+
+    <FrameLayout
+        android:id="@+id/highscoreframe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="40dp"
+            android:gravity="bottom">
+
+        <TextView
+            android:id="@+id/highscorelist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:fontFamily="@font/bungee_inline"
+            android:textSize="20sp"
+            android:textColor="#ffffff"/>
+
+         <Button
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="I'M GONNA BEAT IT!"
+             android:fontFamily="@font/walter_turncoat"
+             android:backgroundTint="@android:color/holo_blue_light"
+             android:textColor="#ffffff"
+             android:layout_gravity="center"
+             android:onClick="hideHighScorePanel"/>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    //*******************************************************************
+
+
+
+    //**********************HOW TO PLAY**********************************
+    <FrameLayout
+        android:id="@+id/howtoplayframe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:fontFamily="@font/bungee_inline"
+                android:text="HOW TO PLAY?"/>
+
+
+
+            //*************HELP CONTENT****************
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+     <ScrollView
+         android:id="@+id/guidescroll"
+        android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:padding="20dp"
+         android:layout_weight="1"
+        android:background="@drawable/roundedcorners">
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             android:padding="20dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_blue_light"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:fontFamily="@font/bungee_inline"
+            android:text="WHAT IS SPREKEN?"/>
+
+            <TextView
+             android:id="@+id/whatisspreken"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textColor="@android:color/holo_blue_light"
+             android:textSize="14sp"
+             android:fontFamily="@font/walter_turncoat"
+             android:text=""/>
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:textColor="@android:color/holo_blue_light"
+                 android:textAlignment="center"
+                 android:textSize="20sp"
+                 android:fontFamily="@font/bungee_inline"
+                 android:text="\nGAME INSTRUCTIONS"/>
+
+             <TextView
+                 android:id="@+id/gameinstructions"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:textColor="@android:color/holo_blue_light"
+                 android:textSize="14sp"
+                 android:fontFamily="@font/walter_turncoat"
+                 android:text=""/>
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:textColor="@android:color/holo_blue_light"
+                 android:textAlignment="center"
+                 android:textSize="20sp"
+                 android:fontFamily="@font/bungee_inline"
+                 android:text="\nDIFFICULTY MODES"/>
+
+             <TextView
+                 android:id="@+id/difficultymodes"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:textColor="@android:color/holo_blue_light"
+                 android:textSize="14sp"
+                 android:fontFamily="@font/walter_turncoat"
+                 android:text=""/>
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:fontFamily="@font/walter_turncoat"
+                 android:text="\nLET'S PRONOUNCE!"
+                 android:textAlignment="center"
+                 android:textColor="@android:color/holo_blue_light"
+                 android:textSize="20sp"
+                 android:textStyle="bold" />
+
+
+         </LinearLayout>
+
+
+            </ScrollView>
+        </LinearLayout>
+        //*****************************************
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GOT IT!"
+                android:fontFamily="@font/walter_turncoat"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:onClick="hideGuide"/>
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+    //*********************************FIRST RUN*******************************
+
+    <FrameLayout
+        android:id="@+id/firstrunframe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:paddingTop="30dp"
+            android:paddingLeft="12dp">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/taphere" />
+
+            <TextView
+                android:layout_gravity="bottom"
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:fontFamily="@font/bungee_inline"
+                android:textColor="#a7f4f2"
+                android:alpha="0.6"
+                android:text="TAP HERE" />
+
+
+        </LinearLayout>
+
+
+
+
+
+    </FrameLayout>
+
+
+    //*************************************************************************
+    //*********************************FLOATING HAND*******************************
+
+    <FrameLayout
+        android:id="@+id/floatinghandframe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="7dp">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/gifImageView"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/taphere" />
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </FrameLayout>
+
+
+    //*************************************************************************
+
+
+
+</RelativeLayout>
